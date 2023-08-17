@@ -63,3 +63,20 @@ console.log('boolean:', b, typeof b);
 console.log('array:', a, typeof a);
 console.log('object:', o, typeof o);
 console.log('Object:', N, typeof N);
+
+const myText = "Hello, world!";
+
+const counter = 3;
+const backtick = `This is my text using backticks ${counter} times`;
+const singleQuote =
+    'This is my text using single quotations ${counter} times';
+const doubleQuote =
+    "This is my text using double quotations ${counter} times";
+const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
+
+console.log("myText:", myText);
+
+console.log("backtick:", backtick);
+console.log("singleQuote:", singleQuote);
+console.log("doubleQuote:", doubleQuote);
+console.log("tryThisAlso:", tryThisAlso);
