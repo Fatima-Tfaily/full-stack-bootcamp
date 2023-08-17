@@ -99,4 +99,13 @@ console.log(num != str);
 console.log(num > bool);
 console.log(bool >= num);
 console.log(str < num);
-console.log(str <= num);    
+console.log(str <= num);
+
+let result0 = 5 + 3 * 2;
+console.log(result0);
+
+let result1 = 10 / 2 + 3;
+console.log(result1);// 10/2=5 then 5+3=8
+
+let result2 = 10 / (2 + 3);
+console.log(result2);//2+3=5 then 10/5=2
