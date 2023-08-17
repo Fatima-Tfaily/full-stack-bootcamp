@@ -86,3 +86,17 @@ var string2 = "How are you";
 var result;
 result = string1 + " " + string2;
 console.log(result);
+
+const num = 5;
+const str = "5";
+const bool = true;
+
+console.log(num === str);
+console.log(num !== str);
+console.log(num == str);
+console.log(num != str);
+
+console.log(num > bool);
+console.log(bool >= num);
+console.log(str < num);
+console.log(str <= num);    
