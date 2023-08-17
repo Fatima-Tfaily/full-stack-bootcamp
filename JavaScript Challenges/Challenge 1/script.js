@@ -80,3 +80,9 @@ console.log("backtick:", backtick);
 console.log("singleQuote:", singleQuote);
 console.log("doubleQuote:", doubleQuote);
 console.log("tryThisAlso:", tryThisAlso);
+
+var string1 = "hello everyone";
+var string2 = "How are you";
+var result;
+result = string1 + " " + string2;
+console.log(result);
