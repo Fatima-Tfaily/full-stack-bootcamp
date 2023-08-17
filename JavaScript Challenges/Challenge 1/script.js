@@ -40,3 +40,26 @@ console.log("Using const:");
 console.log("Age:", ageConst);
 console.log("Last Name:", lastNameConst);
 console.log("Date of Birth:", DOBConst);
+console.log(typeof "this is a text");
+console.log(typeof true);
+console.log(typeof false);
+console.log(typeof 1215);
+console.log(typeof "999");
+console.log(typeof {});
+console.log(typeof []);
+console.log(typeof null);
+console.log(typeof undefined);
+
+let s = "hello";
+let n = 5;
+let b = true;
+let a = [1, 2];
+let o = { o: "hi" };
+let N = null;
+
+console.log('string:', s, typeof s);
+console.log('number:', n, typeof n);
+console.log('boolean:', b, typeof b);
+console.log('array:', a, typeof a);
+console.log('object:', o, typeof o);
+console.log('Object:', N, typeof N);
