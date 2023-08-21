@@ -95,3 +95,33 @@ for (let i = 0; i < fruits.length; i++) {
     }
     console.log(f);
 }
+
+function processArray(array, callback) {
+    const result = [];
+
+    for (let i = 0; i < array.length; i++) {
+        const processedElement = callback(array[i]);
+        result.push(processedElement);
+    }
+
+    return result;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+
+function square(num) {
+    return num * num;
+}
+
+const squaredNumbers = processArray(numbers, square);
+console.log(squaredNumbers);
+
+function multiplier(factor) {
+    return function (number) {
+        return factor * number;
+    };
+}
+
+const multiplyByTwo = multiplier(2);
+
+console.log(multiplyByTwo(5));
