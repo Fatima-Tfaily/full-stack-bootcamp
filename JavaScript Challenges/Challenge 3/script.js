@@ -66,3 +66,32 @@ const squareNumber = (number) => {
 console.log(globalVar);
 // console.log(localVar);    error because i have declare inside the function
 
+for (let i = 1; i <= 10; i++) {
+    let s = "";
+    s += i;
+    console.log(s);
+}
+let j = 1;
+while (j <= 10) {
+    let s = "";
+    s += j;
+    console.log(s);
+    j++;
+}
+let k = 1;
+do {
+    let s = "";
+    if (k % 2 == 0) {
+        s += k;
+        console.log(k);
+    }
+    k++;
+} while (k <= 10);
+let fruits = ['ananas', 'mango', 'fraise', 'fig', 'kiwi'];
+for (let i = 0; i < fruits.length; i++) {
+    let f = "";
+    if (fruits[i].length > 5) {
+        f += fruits[i];
+    }
+    console.log(f);
+}
