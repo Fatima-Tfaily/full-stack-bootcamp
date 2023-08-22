@@ -42,3 +42,12 @@ console.log("thirdNum:", thirdNum);
 console.log("name:", name);
 console.log("location:", location1);
 console.log("nationality:", nationality);
+
+//let { contactInfo: { email, phone } } = personalInfo;    //error because email and phone and contact info not defined in personalInfo
+let [num1, num2, ...restNumbers] = fiveNumbers;
+console.log(restNumbers);
+
+let obj1 = { a: 1, b: 3 };
+let obj2 = { b: 4, c: 5 };
+let mergedObj = { ...obj1, ...obj2 };
+console.log(mergedObj);
