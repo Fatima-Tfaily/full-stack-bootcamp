@@ -5,7 +5,7 @@ let personalInfo = {
     name: 'Fatima',
     age: 18,
     height: 158,
-    location: 'Baalbeck,chmestar',
+    location1: 'Baalbeck,chmestar',
     nationality: 'libanaise'
 }
 
@@ -32,3 +32,13 @@ fullInfo = {
 }
 console.log(fullInfo);
 
+let [firstNum, secondNum, thirdNum] = fiveNumbers;
+let { name, location1, nationality } = personalInfo;
+
+console.log("firstNum:", firstNum);
+console.log("secondNum:", secondNum);
+console.log("thirdNum:", thirdNum);
+
+console.log("name:", name);
+console.log("location:", location1);
+console.log("nationality:", nationality);
