@@ -65,3 +65,53 @@ form.addEventListener('submit', event => {
     console.log('Name:', formData.get('name'));
     console.log('Email:', formData.get('email'));
 });
+
+const cloneButton = document.getElementById('clone-btn');
+const originalDiv1 = document.getElementById('original');
+const clonedDiv = originalDiv1.cloneNode(true);
+clonedDiv.querySelector('p').textContent = "Cloned";
+clonedDiv.style.display = 'block'
+cloneButton.addEventListener('click', () => {
+    if (clonedDiv.style.display === 'none') {
+        clonedDiv.style.display = 'block';
+    } else {
+        clonedDiv.style.display = 'none';
+    }
+});
+const remove = document.createElement('button');
+remove.id = "remove";
+remove.textContent = 'removeHeader';
+document.body.appendChild(remove);
+const removeHeaderButton = document.getElementById('remove');
+
+removeHeaderButton.addEventListener('click', () => {
+    if (headerElement) {
+        headerElement.remove();
+    }
+});
+
+
+const insert = document.createElement('button');
+insert.id = "insert";
+insert.textContent = 'InsertElement';
+document.body.appendChild(insert);
+
+
+function insertBeforeFooter(newElement) {
+    const footerElement = document.querySelector('footer');
+    if (footerElement) {
+        footerElement.insertAdjacentElement('beforebegin', newElement);
+    }
+}
+
+const insertButton = document.getElementById('insert');
+const newElement = document.createElement('div');
+newElement.textContent = 'New Element Inserted';
+
+insert.addEventListener('click', () => {
+    insertBeforeFooter(newElement);
+});
+
+
+
+
