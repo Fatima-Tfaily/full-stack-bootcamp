@@ -134,3 +134,17 @@ function isValidEmail(email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
 }
+const inputFields = form.querySelectorAll("input");
+inputFields.forEach(input => {
+    input.addEventListener("focus", () => {
+        input.style.backgroundColor = "#f0f0f0";
+    });
+
+    input.addEventListener("blur", () => {
+        input.style.backgroundColor = "";
+    });
+});
+
+
+
+
