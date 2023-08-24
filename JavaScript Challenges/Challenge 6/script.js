@@ -65,7 +65,33 @@ async function fetchPost() {
 }
 
 fetchPost();
+async function fetchMultiplePosts() {
+    const postIds = [1, 2, 3];
+    const fetchPromises = postIds.map(id =>
+        fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            .then(response => response.json())
+    );
 
+    try {
+        const posts = await Promise.all(fetchPromises);
+        console.log(posts);
+    } catch (error) {
+        console.error('Error fetching posts:', error);
+    }
+}
+
+fetchMultiplePosts();
+const postIds = [4, 5, 6, 7, 8];
+const fetchPromises = postIds.map(id =>
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        .then(response => response.json())
+);
+
+(async () => {
+    for await (const post of fetchPromises) {
+        console.log(post);
+    }
+})();
 
 
 
