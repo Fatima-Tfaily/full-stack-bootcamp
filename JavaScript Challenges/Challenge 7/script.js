@@ -60,12 +60,10 @@ label3.appendChild(pa);
 
 let s=document.getElementById('submit-btn');
 s.addEventListener('click', () => {
-    let p = document.getElementById('pass');
-    let cp = document.getElementById('cpass');
-    if (p.value !== cp.value) { 
+    if (pass.value !== confirmPass.value) { 
         pa.innerText="Password and Confirm Password do not match!";
         pa.style.color='red';
-    } else {
+    } else{
         window.location.href = 'quotes.html';
     }
 });
