@@ -31,12 +31,14 @@ pass.placeholder='Password';
 confirmPass.placeholder='Confirm Password'
 
 submit.id='submit-btn';
+pass.id='pass';
+confirmPass.id='cpass';
 
 h1.innerText='Sign up Now!';
 h3.innerText='Enter your details';
 label1.innerText='Email:';
-label1.innerText='Password:';
-label1.innerText='Confirm Password:';
+label2.innerText='Password:';
+label3.innerText='Confirm Password:';
 submit.innerText='Submit';
 
 label1.appendChild(email);
@@ -53,3 +55,17 @@ signin.appendChild(signinNow);
 login.appendChild(signin);
 container.appendChild(login);
 document.body.appendChild(container);
+const pa=document.createElement('p');
+label3.appendChild(pa);
+
+let s=document.getElementById('submit-btn');
+s.addEventListener('click', () => {
+    let p = document.getElementById('pass');
+    let cp = document.getElementById('cpass');
+    if (p.value !== cp.value) { 
+        pa.innerText="Password and Confirm Password do not match!";
+        pa.style.color='red';
+    } else {
+        window.location.href = 'quotes.html';
+    }
+});
