@@ -5,12 +5,19 @@ function delay(milliseconds) {
       }, milliseconds);
     });
   }
-  console.log(delay(3000));
+delay(3000)
+  .then((message) =>{
+console.log(message)
+  });
+
 
   fetch("https://uselessfacts.jsph.pl/random.json?language=en")
   .then(response =>response.json())
   .then(data =>{
     console.log(data.text);
+  })
+  .catch(error =>{
+    console.log("error",error);
   });
 
   async function fetchRandomFactAsync() {
