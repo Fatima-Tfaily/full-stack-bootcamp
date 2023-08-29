@@ -5,7 +5,7 @@ function delay(milliseconds) {
       }, milliseconds);
     });
   }
-  console.log(delay(2000));
+  console.log(delay(3000));
 
   fetch("https://uselessfacts.jsph.pl/random.json?language=en")
   .then(response =>response.json())
@@ -24,3 +24,23 @@ function delay(milliseconds) {
   }
   fetchRandomFactAsync();
   
+  const dogImageURLs = [
+    "https://dog.ceo/api/breeds/image/random",
+    "https://dog.ceo/api/breeds/image/random",
+    "https://dog.ceo/api/breeds/image/random"
+  ];
+  
+  async function fetchDogImages() {
+    try {
+      const responses = await Promise.all(dogImageURLs.map(url => fetch(url)));
+      const dataPromises = responses.map(response => response.json());
+      const dogImages = await Promise.all(dataPromises);
+      
+      dogImages.forEach(imageData => {
+        console.log("Dog Image:", imageData.message);
+      });
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
+  }
+  fetchDogImages();
